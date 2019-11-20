@@ -13,6 +13,6 @@ class String1 {
     String1(String s1) {
         //String s2;
         //s2=str1;
-        System.out.println("s= " + s1);
+        System.out.println("s22= " + s1);
     }
 }
