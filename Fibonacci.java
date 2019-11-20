@@ -8,7 +8,8 @@ public class Fibonacci {
     public static void fibonacci(int n) {
         int a = 1;
         int b = 1;
-        //if(n=1)
+        if (n == 1)
+            System.out.print(a + " ");
 
         if (n > 1)
             System.out.print(a + " ");
