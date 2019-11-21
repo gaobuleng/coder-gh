@@ -1,41 +1,21 @@
+import java.math.*;
 public class Overturn {
     public static void main(String[] args) {
-        overturn(65535);
-        overturn(21030);
-        overturn(205);
-        overturn(56);
-        overturn(2);
+        //overturn(65535);
+
+        BigInteger a = BigInteger.valueOf(1230);
+        BigInteger b = BigInteger.valueOf(987654123);
+        BigInteger c = BigInteger.valueOf(1000);
+        negate(a);
+        System.out.println(a + " ");
+        negate(b);
+        System.out.println(b + " ");
+        negate(c);
+        System.out.println(c + " ");
     }
 
-    public static void overturn(int i) {
-        int w, q, b, s, g;
-        if (i / 10000 >= 1 && i/100000 <1) {
-            w = i / 10000;
-            q = (i / 1000) % 10;
-            b = (i / 100) % 10;
-            s = (i / 10) % 10;
-            g = i % 10;
-            System.out.println(g + "" + s + "" + b + "" + q + "" + w);
-        } else if (i / 1000 >= 1) {
-            q = (i / 1000) % 10;
-            b = (i / 100) % 10;
-            s = (i / 10) % 10;
-            g = i % 10;
-            System.out.println(g + "" + s + "" + b + "" + q);
-        } else if (i / 100 >= 1) {
-            b = (i / 100) % 10;
-            s = (i / 10) % 10;
-            g = i % 10;
-            System.out.println(g + "" + s + "" + b);
-        } else if (i / 10 >= 1) {
-            q = (i / 1000) % 10;
-            b = (i / 100) % 10;
-            s = (i / 10) % 10;
-            g = i % 10;
-            System.out.println(g + "" + s);
-        } else {
-            g=i;
-            System.out.println(g+"");
-        }
-    }
+   // public static void overturn(int i) {
+     //   negate(i);
+
+   // }
 }
