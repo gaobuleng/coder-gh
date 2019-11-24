@@ -1,21 +1,20 @@
-import java.math.*;
 public class Overturn {
     public static void main(String[] args) {
-        //overturn(65535);
-
-        BigInteger a = BigInteger.valueOf(1230);
-        BigInteger b = BigInteger.valueOf(987654123);
-        BigInteger c = BigInteger.valueOf(1000);
-        negate(a);
-        System.out.println(a + " ");
-        negate(b);
-        System.out.println(b + " ");
-        negate(c);
-        System.out.println(c + " ");
+        reverse(10230);
     }
-
-   // public static void overturn(int i) {
-     //   negate(i);
-
-   // }
+    public static void reverse(int x) {
+        int ans = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            if (ans > Integer.MAX_VALUE / 10 || (ans == Integer.MAX_VALUE / 10 && pop > 7))
+                System.out.println(0);
+            if (ans < Integer.MIN_VALUE / 10 || (ans == Integer.MIN_VALUE / 10 && pop < -8))
+                System.out.println(0);
+            ans = ans * 10 + pop;
+            x /= 10;
+        }
+        System.out.println(ans);
+    }
 }
+
+
