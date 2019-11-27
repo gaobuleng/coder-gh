@@ -1,15 +1,23 @@
 public class Hetodc {
     public static void main(String[] args) {
-        String s = "abc";
+        String s = "0xaBC";
         System.out.println(hexToDec(s));
     }
 
     public static int hexToDec(String s) {
+
+        if ((s.charAt(0) == '0' && s.charAt(1) == 'x') || (s.charAt(0) == '0' && s.charAt(1) == 'X')) {
+            return decAns(2, s);
+        } else {
+            return decAns(0, s);
+        }
+    }
+
+    public static int decAns(int j, String s) {
         int len = s.length();
         int ans = 0;
         int ic = 0;
-
-        for (int i = 0; i < len; i++) {
+        for (int i = j; i < len; i++) {
             char c = s.charAt(i);
             ic = (char) c;
             if (ans > Integer.MAX_VALUE / 10 || ans == Integer.MAX_VALUE / 10 && ic > 7) {
