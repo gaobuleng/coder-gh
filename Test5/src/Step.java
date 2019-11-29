@@ -2,7 +2,7 @@
             共有多少种方法*/
 public class Step {
     public static void main(String[] args) {
-        System.out.println(stepNum(10));
+        System.out.println(stepNum(20));
     }
 
     public static int stepNum(int n) {
@@ -27,15 +27,15 @@ public class Step {
 
     }
 
-    static int numMid(int i, int n) {
+    static long numMid(int i, int n) {
         int res = 0;
         res = n % i;
         return ((factorial(i)) / (factorial(res)) / factorial(i - res));
 
     }
 
-    static int factorial(int ii) {
-        int ans = 1;
+    static long factorial(int ii) {
+        long ans = 1L;
         for (int i = ii; i >= 1; --i) {
             ans = ans * i;
         }
