@@ -1,7 +1,9 @@
 public class Hetodc {
     public static void main(String[] args) {
-        String s = "0xaBC";
-        System.out.println(hexToDec(s));
+        String s1 = "123";
+        String s2 = "0xabc";
+        System.out.println(hexToDec(s1));
+        System.out.println(hexToDec(s2));
     }
 
     public static int hexToDec(String s) {
